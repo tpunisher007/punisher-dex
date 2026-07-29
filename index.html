@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Punisher DEX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Background Glow -->
+
+<div class="bg-blur blur1"></div>
+
+<div class="bg-blur blur2"></div>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+PUNISHER <span>DEX</span>
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Markets</a></li>
+
+<li><a href="#">Trade</a></li>
+
+<li><a href="#">Swap</a></li>
+
+<li><a href="#">Portfolio</a></li>
+
+<li><a href="#">Roadmap</a></li>
+
+</ul>
+
+<button id="walletBtn">
+
+Connect Wallet
+
+</button>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-left">
+  <div class="badge">
+🚀 Building on Arc
+</div>
+
+<h1>
+
+Trade Crypto
+
+<span>Faster.</span>
+
+</h1>
+
+<p>
+
+Punisher DEX is a decentralized trading platform prototype built to learn modern Web3 technologies, token swaps and wallet connectivity.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary">
+
+Launch App
+
+</button>
+
+<button class="secondary">
+
+Explore Markets
+
+</button>
+
+</div>
+
+<div class="stats">
+
+<div>
+
+<h2>$2.4B</h2>
+
+<p>Trading Volume</p>
+
+</div>
+
+<div>
+
+<h2>120K+</h2>
+
+<p>Active Traders</p>
+
+</div>
+
+<div>
+
+<h2>98%</h2>
+
+<p>Uptime</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="dashboard-card">
+
+<h3>
+
+Trading Dashboard
+
+</h3>
+
+<div class="token">
+
+<span>BTC</span>
+
+<strong>$117,842</strong>
+
+</div>
+
+<div class="token">
+
+<span>ETH</span>
+
+<strong>$3,821</strong>
+
+</div>
+
+<div class="token">
+
+<span>SOL</span>
+
+<strong>$182</strong>
+
+</div>
+
+<div class="token">
+
+<span>USDC</span>
+
+<strong>$1.00</strong>
+
+</div>
+
+<button class="trade-btn">
+
+Start Trading
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PART 2 STARTS BELOW -->
+  <!-- MARKET OVERVIEW -->
+
+<section class="market">
+
+<h2>🔥 Trending Markets</h2>
+
+<div class="market-grid">
+
+<div class="market-card">
+
+<h3>BTC / USDT</h3>
+
+<h1>$117,842</h1>
+
+<p class="green">▲ +2.84%</p>
+
+<span>24h Vol: $38.2B</span>
+
+</div>
+
+<div class="market-card">
+
+<h3>ETH / USDT</h3>
+
+<h1>$3,821</h1>
+
+<p class="green">▲ +1.41%</p>
+
+<span>24h Vol: $19.8B</span>
+
+</div>
+
+<div class="market-card">
+
+<h3>SOL / USDT</h3>
+
+<h1>$182</h1>
+
+<p class="red">▼ -0.82%</p>
+
+<span>24h Vol: $4.6B</span>
+
+</div>
+
+<div class="market-card">
+
+<h3>BNB / USDT</h3>
+
+<h1>$812</h1>
+
+<p class="green">▲ +0.93%</p>
+
+<span>24h Vol: $2.1B</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SWAP -->
+
+<section class="swap-section">
+
+<div class="swap-card">
+
+<h2>Swap Tokens</h2>
+
+<label>From</label>
+
+<input type="number" placeholder="0.00">
+
+<select>
+
+<option>ETH</option>
+
+<option>BTC</option>
+
+<option>SOL</option>
+
+<option>USDC</option>
+
+</select>
+
+<label>To</label>
+
+<input type="number" placeholder="0.00">
+
+<select>
+
+<option>USDC</option>
+
+<option>ETH</option>
+
+<option>BTC</option>
+
+<option>SOL</option>
+
+</select>
+
+<button id="swapBtn">
+
+Swap Now
+
+</button>
+
+</div>
+
+
+
+<div class="info-card">
+
+<h2>Trade Highlights</h2>
+
+<div class="highlight">
+
+<span>⚡ Fast Execution</span>
+
+<p>Execute demo trades instantly.</p>
+
+</div>
+
+<div class="highlight">
+
+<span>🔐 Secure Wallet</span>
+
+<p>Wallet connection coming soon.</p>
+
+</div>
+
+<div class="highlight">
+
+<span>📈 Market Analytics</span>
+
+<p>Track crypto market performance.</p>
+
+</div>
+
+<div class="highlight">
+
+<span>💱 Cross Token Swaps</span>
+
+<p>Swap supported assets with ease.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>Why Punisher DEX?</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+
+<div class="icon">⚡</div>
+
+<h3>Lightning Fast</h3>
+
+<p>
+
+Built for smooth trading experience with an intuitive interface.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">📈</div>
+
+<h3>Market Tracking</h3>
+
+<p>
+
+Stay updated with crypto prices and market trends.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">🔒</div>
+
+<h3>Secure</h3>
+
+<p>
+
+Wallet connectivity and decentralized architecture are planned.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">💱</div>
+
+<h3>Easy Swaps</h3>
+
+<p>
+
+Swap crypto assets through a clean trading interface.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PART 3 STARTS BELOW -->
+  <!-- ROADMAP -->
+
+<section class="roadmap">
+
+<h2>Project Roadmap</h2>
+
+<div class="timeline">
+
+<div class="step done">
+<span>✔</span>
+<div>
+<h3>Repository Setup</h3>
+<p>Project initialized and published on GitHub.</p>
+</div>
+</div>
+
+<div class="step done">
+<span>✔</span>
+<div>
+<h3>Trading Landing Page</h3>
+<p>Responsive landing page with trading dashboard.</p>
+</div>
+</div>
+
+<div class="step done">
+<span>✔</span>
+<div>
+<h3>Swap Interface</h3>
+<p>Basic swap interface prototype completed.</p>
+</div>
+</div>
+
+<div class="step">
+<span>●</span>
+<div>
+<h3>Wallet Integration</h3>
+<p>Connect popular Web3 wallets.</p>
+</div>
+</div>
+
+<div class="step">
+<span>●</span>
+<div>
+<h3>Smart Contracts</h3>
+<p>Integrate swap smart contracts.</p>
+</div>
+</div>
+
+<div class="step">
+<span>●</span>
+<div>
+<h3>Testnet Deployment</h3>
+<p>Deploy and test application on a blockchain testnet.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-box">
+
+<h3>Is Punisher DEX live?</h3>
+
+<p>
+No. This is currently a learning project and prototype.
+</p>
+
+</div>
+
+<div class="faq-box">
+
+<h3>Can I connect my wallet?</h3>
+
+<p>
+Wallet integration is planned for future development.
+</p>
+
+</div>
+
+<div class="faq-box">
+
+<h3>Does this support real trading?</h3>
+
+<p>
+No. Current version demonstrates the frontend interface only.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+
+Ready to Explore Decentralized Trading?
+
+</h2>
+
+<p>
+
+Follow the project journey on GitHub and watch new features arrive.
+
+</p>
+
+<a href="https://github.com/tpunisher07/arc-prep-dex" target="_blank">
+
+<button>
+
+View Source Code
+
+</button>
+
+</a>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+
+<h2>
+
+Punisher DEX
+
+</h2>
+
+<p>
+
+A personal learning project focused on decentralized trading interfaces and modern Web3 development.
+
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<a href="#">Home</a>
+
+<a href="#">Markets</a>
+
+<a href="#">Trade</a>
+
+<a href="#">Swap</a>
+
+<a href="#">Roadmap</a>
+
+</div>
+
+<div class="footer-social">
+
+<a href="https://github.com/tpunisher07" target="_blank">
+
+GitHub
+
+</a>
+
+<a href="https://x.com/Tpunisher07" target="_blank">
+
+X
+
+</a>
+
+</div>
+
+<p class="copyright">
+
+
+© 2026 Punisher DEX • Built while exploring the Arc ecosystem.
+
+</p>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
