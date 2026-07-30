@@ -1,143 +1,150 @@
-// ================================
+// ===============================
 // PUNISHER DEX
-// ================================
+// Stablecoin Transfer Demo
+// ===============================
+
+// Elements
 
 const walletBtn = document.getElementById("walletBtn");
-const swapBtn = document.getElementById("swapBtn");
+const sendBtn = document.getElementById("sendBtn");
 
-// ===================================
-// Toast Notification
-// ===================================
+const receiver = document.getElementById("receiver");
+const amount = document.getElementById("amount");
+const token = document.getElementById("token");
 
-function showToast(message){
+const previewAddress = document.getElementById("previewAddress");
+const previewAmount = document.getElementById("previewAmount");
+const previewToken = document.getElementById("previewToken");
 
-const toast=document.createElement("div");
 
-toast.innerText=message;
 
-toast.style.position="fixed";
-toast.style.bottom="30px";
-toast.style.right="30px";
-toast.style.padding="15px 25px";
-toast.style.background="#7c5cff";
-toast.style.color="#fff";
-toast.style.borderRadius="12px";
-toast.style.boxShadow="0 10px 25px rgba(0,0,0,.3)";
-toast.style.zIndex="9999";
-toast.style.fontWeight="600";
+// ===============================
+// Toast
+// ===============================
 
-document.body.appendChild(toast);
+function toast(message){
+
+const div=document.createElement("div");
+
+div.innerText=message;
+
+div.style.position="fixed";
+div.style.bottom="30px";
+div.style.right="30px";
+div.style.background="#7c5cff";
+div.style.padding="15px 25px";
+div.style.color="#fff";
+div.style.borderRadius="12px";
+div.style.boxShadow="0 15px 35px rgba(0,0,0,.3)";
+div.style.zIndex="9999";
+div.style.fontWeight="600";
+
+document.body.appendChild(div);
 
 setTimeout(()=>{
 
-toast.style.opacity="0";
-toast.style.transition=".4s";
+div.style.opacity="0";
+div.style.transition=".4s";
 
 },2200);
 
 setTimeout(()=>{
 
-toast.remove();
+div.remove();
 
 },2600);
 
 }
 
-// ===================================
-// Wallet
-// ===================================
 
-if(walletBtn){
+
+// ===============================
+// Wallet
+// ===============================
 
 walletBtn.onclick=()=>{
 
-showToast("Wallet integration coming soon 🚀");
+toast("Wallet connection coming soon 🚀");
+
+};
+
+
+
+// ===============================
+// Live Preview
+// ===============================
+
+receiver.addEventListener("input",()=>{
+
+previewAddress.innerText=
+
+receiver.value || "Not entered";
+
+});
+
+
+
+amount.addEventListener("input",()=>{
+
+previewAmount.innerText=
+
+amount.value || "0.00";
+
+});
+
+
+
+token.addEventListener("change",()=>{
+
+previewToken.innerText=
+
+token.value;
+
+});
+
+
+
+// ===============================
+// Send Demo
+// ===============================
+
+sendBtn.onclick=()=>{
+
+if(receiver.value===""){
+
+toast("Enter recipient address");
+
+return;
 
 }
 
-}
+if(amount.value===""){
 
-// ===================================
-// Swap Demo
-// ===================================
+toast("Enter amount");
 
-if(swapBtn){
-
-swapBtn.onclick=()=>{
-
-showToast("Demo Swap Successful ✅");
+return;
 
 }
 
-}
+toast(
 
-// ===================================
-// Fake Market Prices
-// ===================================
-
-const prices=document.querySelectorAll(".market-card h1");
-
-function randomMove(){
-
-prices.forEach(price=>{
-
-let text=price.innerText;
-
-if(text.includes("$")){
-
-let number=parseFloat(
-
-text.replace("$","").replace(/,/g,"")
+"Demo transfer submitted ✔"
 
 );
 
-let change=(Math.random()*8)-4;
+};
 
-number+=change;
 
-price.innerText="$"+number.toLocaleString(undefined,{
 
-maximumFractionDigits:2
-
-});
-
-}
-
-});
-
-}
-
-setInterval(randomMove,3000);
-
-// ===================================
-// Navbar Shadow
-// ===================================
-
-const navbar=document.querySelector(".navbar");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>50){
-
-navbar.style.boxShadow="0 10px 30px rgba(0,0,0,.35)";
-
-}else{
-
-navbar.style.boxShadow="none";
-
-}
-
-});
-
-// ===================================
+// ===============================
 // Smooth Scroll
-// ===================================
+// ===============================
 
-document.querySelectorAll("a").forEach(anchor=>{
+document.querySelectorAll("a").forEach(link=>{
 
-anchor.addEventListener("click",function(e){
+link.addEventListener("click",e=>{
 
-const href=this.getAttribute("href");
+const href=link.getAttribute("href");
 
 if(href.startsWith("#")){
 
@@ -155,30 +162,44 @@ behavior:"smooth"
 
 });
 
-// ===================================
-// Ripple Button Effect
-// ===================================
 
-document.querySelectorAll("button").forEach(btn=>{
 
-btn.addEventListener("mouseenter",()=>{
+// ===============================
+// Navbar Shadow
+// ===============================
 
-btn.style.transform="translateY(-2px)";
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>20){
+
+header.style.boxShadow="0 8px 25px rgba(0,0,0,.35)";
+
+}else{
+
+header.style.boxShadow="none";
+
+}
 
 });
 
-btn.addEventListener("mouseleave",()=>{
 
-btn.style.transform="translateY(0px)";
 
-});
+// ===============================
+// Console
+// ===============================
 
-});
+console.log(
 
-// ===================================
-// Console Message
-// ===================================
+"%cPunisher DEX",
 
-console.log("%cPunisher DEX","font-size:28px;color:#7c5cff;font-weight:bold;");
+"font-size:26px;color:#7c5cff;font-weight:bold;"
 
-console.log("Prototype under development 🚀");
+);
+
+console.log(
+
+"Built while exploring the Arc ecosystem."
+
+);
