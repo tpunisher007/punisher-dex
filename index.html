@@ -1,126 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<title>Punisher DEX</title>
+
+<title>Punisher DEX | Stablecoin Transfer</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Background Glow -->
-
 <div class="bg-blur blur1"></div>
-
 <div class="bg-blur blur2"></div>
 
-<!-- Navbar -->
-
-<nav class="navbar">
+<header>
 
 <div class="logo">
-
 PUNISHER <span>DEX</span>
-
 </div>
 
-<ul>
+<nav>
 
-<li><a href="#">Home</a></li>
-
-<li><a href="#">Markets</a></li>
-
-<li><a href="#">Trade</a></li>
-
-<li><a href="#">Swap</a></li>
-
-<li><a href="#">Portfolio</a></li>
-
-<li><a href="#">Roadmap</a></li>
-
-</ul>
-
-<button id="walletBtn">
-
-Connect Wallet
-
-</button>
+<a href="#">Home</a>
+<a href="#">Markets</a>
+<a href="#">Transfer</a>
+<a href="#">Portfolio</a>
+<a href="#">Roadmap</a>
 
 </nav>
 
-<!-- Hero -->
+<button id="walletBtn">
+Connect Wallet
+</button>
+
+</header>
 
 <section class="hero">
 
 <div class="hero-left">
-  <div class="badge">
-🚀 Building on Arc
-</div>
 
 <h1>
-
-Trade Crypto
-
-<span>Faster.</span>
-
+Send <span>USDC</span> & <span>EURC</span>
+Across the Arc Ecosystem
 </h1>
 
 <p>
 
-Punisher DEX is a decentralized trading platform prototype built to learn modern Web3 technologies, token swaps and wallet connectivity.
+Fast demo interface for stablecoin transfers.
+Built while exploring the Arc ecosystem.
 
 </p>
 
 <div class="hero-buttons">
 
 <button class="primary">
-
-Launch App
-
+Launch Transfer
 </button>
 
 <button class="secondary">
-
-Explore Markets
-
+View Docs
 </button>
-
-</div>
-
-<div class="stats">
-
-<div>
-
-<h2>$2.4B</h2>
-
-<p>Trading Volume</p>
-
-</div>
-
-<div>
-
-<h2>120K+</h2>
-
-<p>Active Traders</p>
-
-</div>
-
-<div>
-
-<h2>98%</h2>
-
-<p>Uptime</p>
-
-</div>
 
 </div>
 
@@ -128,478 +69,276 @@ Explore Markets
 
 <div class="hero-right">
 
-<div class="dashboard-card">
-
-<h3>
-
-Trading Dashboard
-
-</h3>
-
-<div class="token">
-
-<span>BTC</span>
-
-<strong>$117,842</strong>
-
-</div>
-
-<div class="token">
-
-<span>ETH</span>
-
-<strong>$3,821</strong>
-
-</div>
-
-<div class="token">
-
-<span>SOL</span>
-
-<strong>$182</strong>
-
-</div>
-
-<div class="token">
-
-<span>USDC</span>
-
-<strong>$1.00</strong>
-
-</div>
-
-<button class="trade-btn">
-
-Start Trading
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PART 2 STARTS BELOW -->
-  <!-- MARKET OVERVIEW -->
-
-<section class="market">
-
-<h2>🔥 Trending Markets</h2>
-
-<div class="market-grid">
-
-<div class="market-card">
-
-<h3>BTC / USDT</h3>
-
-<h1>$117,842</h1>
-
-<p class="green">▲ +2.84%</p>
-
-<span>24h Vol: $38.2B</span>
-
-</div>
-
-<div class="market-card">
-
-<h3>ETH / USDT</h3>
-
-<h1>$3,821</h1>
-
-<p class="green">▲ +1.41%</p>
-
-<span>24h Vol: $19.8B</span>
-
-</div>
-
-<div class="market-card">
-
-<h3>SOL / USDT</h3>
-
-<h1>$182</h1>
-
-<p class="red">▼ -0.82%</p>
-
-<span>24h Vol: $4.6B</span>
-
-</div>
-
-<div class="market-card">
-
-<h3>BNB / USDT</h3>
-
-<h1>$812</h1>
-
-<p class="green">▲ +0.93%</p>
-
-<span>24h Vol: $2.1B</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- SWAP -->
-
-<section class="swap-section">
-
-<div class="swap-card">
-
-<h2>Swap Tokens</h2>
-
-<label>From</label>
-
-<input type="number" placeholder="0.00">
-
-<select>
-
-<option>ETH</option>
-
-<option>BTC</option>
-
-<option>SOL</option>
-
-<option>USDC</option>
+<div class="transfer-card">
+
+<h2>
+Send Stablecoins
+</h2>
+
+<label>
+Recipient Address
+</label>
+
+<input
+type="text"
+placeholder="0x..."
+id="receiver"
+/>
+
+<label>
+Select Token
+</label>
+
+<select id="token">
+
+<option>
+USDC
+</option>
+
+<option>
+EURC
+</option>
 
 </select>
 
-<label>To</label>
+<label>
+Amount
+</label>
 
-<input type="number" placeholder="0.00">
+<input
+type="number"
+placeholder="0.00"
+id="amount"
+/>
 
-<select>
+<label>
+Network
+</label>
 
-<option>USDC</option>
+<select id="network">
 
-<option>ETH</option>
+<option>
+Arc
+</option>
+<div class="fee-box">
 
-<option>BTC</option>
+<div class="fee-row">
+<span>Network</span>
+<span>Arc</span>
+</div>
 
-<option>SOL</option>
+<div class="fee-row">
+<span>Estimated Fee</span>
+<span>0.0002 ARC</span>
+</div>
 
-</select>
+<div class="fee-row">
+<span>Estimated Time</span>
+<span>~2 sec</span>
+</div>
 
-<button id="swapBtn">
+</div>
 
-Swap Now
+<div class="preview-card">
 
+<h3>Transaction Preview</h3>
+
+<div class="preview-row">
+<span>Recipient</span>
+<span id="previewAddress">
+Not entered
+</span>
+</div>
+
+<div class="preview-row">
+<span>Token</span>
+<span id="previewToken">
+USDC
+</span>
+</div>
+
+<div class="preview-row">
+<span>Amount</span>
+<span id="previewAmount">
+0.00
+</span>
+</div>
+
+<div class="preview-row">
+<span>Status</span>
+<span class="pending">
+Ready
+</span>
+</div>
+
+</div>
+
+<button id="sendBtn">
+Send Token
 </button>
 
-</div>
-
-
-
-<div class="info-card">
-
-<h2>Trade Highlights</h2>
-
-<div class="highlight">
-
-<span>⚡ Fast Execution</span>
-
-<p>Execute demo trades instantly.</p>
-
-</div>
-
-<div class="highlight">
-
-<span>🔐 Secure Wallet</span>
-
-<p>Wallet connection coming soon.</p>
-
-</div>
-
-<div class="highlight">
-
-<span>📈 Market Analytics</span>
-
-<p>Track crypto market performance.</p>
-
-</div>
-
-<div class="highlight">
-
-<span>💱 Cross Token Swaps</span>
-
-<p>Swap supported assets with ease.</p>
+<p class="demo-note">
+Demo interface only. No blockchain transaction will be executed.
+</p>
 
 </div>
 
 </div>
 
 </section>
-
-
-
-<!-- FEATURES -->
 
 <section class="features">
 
-<h2>Why Punisher DEX?</h2>
+<h2>
+Why Punisher DEX?
+</h2>
 
 <div class="feature-grid">
 
-<div class="feature">
-
-<div class="icon">⚡</div>
-
-<h3>Lightning Fast</h3>
-
+<div class="feature-card">
+<h3>⚡ Fast Transfers</h3>
 <p>
-
-Built for smooth trading experience with an intuitive interface.
-
+Transfer stablecoins with a simple and clean interface.
 </p>
-
 </div>
 
-<div class="feature">
-
-<div class="icon">📈</div>
-
-<h3>Market Tracking</h3>
-
+<div class="feature-card">
+<h3>🔐 Secure Wallet UI</h3>
 <p>
-
-Stay updated with crypto prices and market trends.
-
+Designed for future wallet integration and secure signing.
 </p>
-
 </div>
 
-<div class="feature">
-
-<div class="icon">🔒</div>
-
-<h3>Secure</h3>
-
+<div class="feature-card">
+<h3>🌍 Cross Border Payments</h3>
 <p>
-
-Wallet connectivity and decentralized architecture are planned.
-
+Prototype for global USDC and EURC transfers.
 </p>
-
 </div>
 
-<div class="feature">
-
-<div class="icon">💱</div>
-
-<h3>Easy Swaps</h3>
-
+<div class="feature-card">
+<h3>📊 Live Portfolio</h3>
 <p>
-
-Swap crypto assets through a clean trading interface.
-
+Track balances and transaction history in one place.
 </p>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- PART 3 STARTS BELOW -->
-  <!-- ROADMAP -->
-
-<section class="roadmap">
-
-<h2>Project Roadmap</h2>
-
-<div class="timeline">
-
-<div class="step done">
-<span>✔</span>
-<div>
-<h3>Repository Setup</h3>
-<p>Project initialized and published on GitHub.</p>
-</div>
-</div>
-
-<div class="step done">
-<span>✔</span>
-<div>
-<h3>Trading Landing Page</h3>
-<p>Responsive landing page with trading dashboard.</p>
-</div>
-</div>
-
-<div class="step done">
-<span>✔</span>
-<div>
-<h3>Swap Interface</h3>
-<p>Basic swap interface prototype completed.</p>
-</div>
-</div>
-
-<div class="step">
-<span>●</span>
-<div>
-<h3>Wallet Integration</h3>
-<p>Connect popular Web3 wallets.</p>
-</div>
-</div>
-
-<div class="step">
-<span>●</span>
-<div>
-<h3>Smart Contracts</h3>
-<p>Integrate swap smart contracts.</p>
-</div>
-</div>
-
-<div class="step">
-<span>●</span>
-<div>
-<h3>Testnet Deployment</h3>
-<p>Deploy and test application on a blockchain testnet.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FAQ -->
-
-<section class="faq">
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-box">
-
-<h3>Is Punisher DEX live?</h3>
-
-<p>
-No. This is currently a learning project and prototype.
-</p>
-
-</div>
-
-<div class="faq-box">
-
-<h3>Can I connect my wallet?</h3>
-
-<p>
-Wallet integration is planned for future development.
-</p>
-
-</div>
-
-<div class="faq-box">
-
-<h3>Does this support real trading?</h3>
-
-<p>
-No. Current version demonstrates the frontend interface only.
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- CTA -->
-
-<section class="cta">
+<section class="stats">
 
 <h2>
-
-Ready to Explore Decentralized Trading?
-
+Network Overview
 </h2>
 
-<p>
+<div class="stats-grid">
 
-Follow the project journey on GitHub and watch new features arrive.
+<div class="stat-card">
+<h3>Supported Tokens</h3>
+<p>USDC • EURC</p>
+</div>
 
-</p>
+<div class="stat-card">
+<h3>Network</h3>
+<p>Arc</p>
+</div>
 
-<a href="https://github.com/tpunisher07/arc-prep-dex" target="_blank">
+<div class="stat-card">
+<h3>Status</h3>
+<p>Demo Mode</p>
+</div>
 
-<button>
+<div class="stat-card">
+<h3>Wallet</h3>
+<p>Coming Soon</p>
+</div>
 
-View Source Code
-
-</button>
-
-</a>
+</div>
 
 </section>
+  <section class="roadmap">
 
+<h2>Roadmap</h2>
 
+<div class="roadmap-grid">
 
-<!-- FOOTER -->
+<div class="roadmap-card">
+<h3>Phase 1</h3>
+<p>Responsive UI</p>
+</div>
+
+<div class="roadmap-card">
+<h3>Phase 2</h3>
+<p>Wallet Connection</p>
+</div>
+
+<div class="roadmap-card">
+<h3>Phase 3</h3>
+<p>USDC / EURC Transfers</p>
+</div>
+
+<div class="roadmap-card">
+<h3>Phase 4</h3>
+<p>Smart Contract Integration</p>
+</div>
+
+</div>
+
+</section>
 
 <footer>
 
-<div class="footer-logo">
+<div class="footer-content">
 
-<h2>
+<div>
 
-Punisher DEX
-
-</h2>
+<h3>Punisher DEX</h3>
 
 <p>
-
-A personal learning project focused on decentralized trading interfaces and modern Web3 development.
-
+A frontend prototype for stablecoin transfers built while exploring the Arc ecosystem.
 </p>
 
 </div>
 
-<div class="footer-links">
+<div>
+
+<h4>Quick Links</h4>
 
 <a href="#">Home</a>
-
+<a href="#">Transfer</a>
 <a href="#">Markets</a>
-
-<a href="#">Trade</a>
-
-<a href="#">Swap</a>
-
-<a href="#">Roadmap</a>
+<a href="#">Portfolio</a>
 
 </div>
 
-<div class="footer-social">
+<div>
 
-<a href="https://github.com/tpunisher07" target="_blank">
+<h4>Connect</h4>
 
+<a href="https://github.com/tpunisher007" target="_blank">
 GitHub
-
 </a>
 
 <a href="https://x.com/Tpunisher07" target="_blank">
-
 X
-
 </a>
+
+</div>
 
 </div>
 
 <p class="copyright">
 
-
 © 2026 Punisher DEX • Built while exploring the Arc ecosystem.
 
 </p>
 
-
 </footer>
-
-
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
+</select>
